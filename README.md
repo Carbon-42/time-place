@@ -159,86 +159,91 @@ USER STORIES:
 6. As a user, I would like to be able to see a chart showing the upcoming events in each city so
    that I know what events are organized in which city.
 
-- [ ] USER STORY 1:
-      FEATURE 1: FILTER EVENTS BY CITY
+### USER STORY 1:
 
-  Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
+#### FEATURE 1: FILTER EVENTS BY CITY
 
-  > **Given** user hasn’t searched for any city  
-  > **When** the user opens the app  
-  > **Then** the user should see a list of all upcoming events
+Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
 
-  Scenario 2: User should see a list of suggestions when they search for a city.
+> **Given** user hasn’t searched for any city  
+> **When** the user opens the app  
+> **Then** the user should see a list of all upcoming events
 
-  > **Given** the main page is open  
-  > **When** user starts typing in the city textbox  
-  > **Then** the user should see a list of cities (suggestions) that match what they’ve typed
+Scenario 2: User should see a list of suggestions when they search for a city.
 
-  Scenario 3: User can select a city from the suggested list.
+> **Given** the main page is open  
+> **When** user starts typing in the city textbox  
+> **Then** the user should see a list of cities (suggestions) that match what they’ve typed
 
-  > **Given** the user was typing “Berlin” in the city textbox and the list of suggested cities is showing  
-  > **When** the user selects a city (e.g., “Berlin, Germany”) from the list  
-  > **Then** their city should be changed to that city (i.e., “Berlin, Germany”) and the user should receive a list of upcoming events in that city
+Scenario 3: User can select a city from the suggested list.
 
-- [ ] USER STORY 2:
-      FEATURE 2: SHOW/HIDE AN EVENT’S DETAILS
+> **Given** the user was typing “Berlin” in the city textbox and the list of suggested cities is showing  
+> **When** the user selects a city (e.g., “Berlin, Germany”) from the list  
+> **Then** their city should be changed to that city (i.e., “Berlin, Germany”) and the user should receive a list of upcoming events in that city
 
-  Scenario 1: An event element is collapsed by default.
+### USER STORY 2:
 
-  > **Given** user is viewing the event list  
-  > **When** the user sees an event  
-  > **Then** the event details will be hidden by default
+#### FEATURE 2: SHOW/HIDE AN EVENT’S DETAILS
 
-  Scenario 2: User can expand an event to see its details.
+Scenario 1: An event element is collapsed by default.
 
-  > **Given** the user finds an event they want to know more about  
-  > **When** the user clicks a button  
-  > **Then** the event details will be displayed
+> **Given** user is viewing the event list  
+> **When** the user sees an event  
+> **Then** the event details will be hidden by default
 
-  Scenario 3: User can collapse an event to hide its details.
+Scenario 2: User can expand an event to see its details.
 
-  > **Given** the user no longer wants to see the event details  
-  > **When** the user clicks a button  
-  > **Then** the event details will be hidden
+> **Given** the user finds an event they want to know more about  
+> **When** the user clicks a button  
+> **Then** the event details will be displayed
 
-- [ ] USER STORY 3:
-      FEATURE 3: SPECIFY NUMBER OF EVENTS
+Scenario 3: User can collapse an event to hide its details.
 
-  Scenario 1: When user hasn’t specified a number, 32 is the default number.
+> **Given** the user no longer wants to see the event details  
+> **When** the user clicks a button  
+> **Then** the event details will be hidden
 
-  > **Given** the user has not made a selection  
-  > **When** the user view the event list  
-  > **Then** the event list will be 32 entires in length by default
+### USER STORY 3:
 
-  Scenario 2: User can change the number of events they want to see.
+#### FEATURE 3: SPECIFY NUMBER OF EVENTS
 
-  > **Given** the user wants to change the number of events in the list  
-  > **When** the user selects a number in the "number of events" field  
-  > **Then** the number of events displayed in the list will match that number
+Scenario 1: When user hasn’t specified a number, 32 is the default number.
 
-- [ ] USER STORY 4:
-      FEATURE 4: USE THE APP WHEN OFFLINE
+> **Given** the user has not made a selection  
+> **When** the user view the event list  
+> **Then** the event list will be 32 entires in length by default
 
-  Scenario 1: Show cached data when there’s no internet connection.
+Scenario 2: User can change the number of events they want to see.
 
-  > **Given** the user is offline  
-  > **When** the user access' the app  
-  > **Then** the user will see cached information from their most recent search
+> **Given** the user wants to change the number of events in the list  
+> **When** the user selects a number in the "number of events" field  
+> **Then** the number of events displayed in the list will match that number
 
-  Scenario 2: Show error when user changes the settings (city, time range).
+### USER STORY 4:
 
-  > **Given** the user is offline  
-  > **When** the user changes the setting for the selected city or time range  
-  > **Then** an error will be displayed indicating they must connect to a network to complete their search
+#### FEATURE 4: USE THE APP WHEN OFFLINE
 
-- [ ] USER STORY 5:
-      FEATURE 5: DATA VISUALIZATION
+Scenario 1: Show cached data when there’s no internet connection.
 
-  Scenario 1: Show a chart with the number of upcoming events in each city.
+> **Given** the user is offline  
+> **When** the user access' the app  
+> **Then** the user will see cached information from their most recent search
 
-  > **Given** the user wants to compare the number of events in each city  
-  > **When** the user navigates to the bottom of the page or clicks a button  
-  > **Then** the user will see a chart comparing the number of events in all cities
+Scenario 2: Show error when user changes the settings (city, time range).
+
+> **Given** the user is offline  
+> **When** the user changes the setting for the selected city or time range  
+> **Then** an error will be displayed indicating they must connect to a network to complete their search
+
+### USER STORY 5:
+
+#### FEATURE 5: DATA VISUALIZATION
+
+Scenario 1: Show a chart with the number of upcoming events in each city.
+
+> **Given** the user wants to compare the number of events in each city  
+> **When** the user navigates to the bottom of the page or clicks a button  
+> **Then** the user will see a chart comparing the number of events in all cities
 
 See the [open issues](https://github.com/Carbon-42/time-place/issues) for a full list of proposed features (and known issues).
 
