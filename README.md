@@ -164,59 +164,81 @@ USER STORIES:
 
   Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.
 
-  > **Given** user hasn’t searched for any city<br> > **When** the user opens the app<br> > **Then** the user should see a list of all upcoming events<br>
+  > **Given** user hasn’t searched for any city  
+  > **When** the user opens the app  
+  > **Then** the user should see a list of all upcoming events
 
   Scenario 2: User should see a list of suggestions when they search for a city.
 
-  > **Given** the main page is open<br> > **When** user starts typing in the city textbox<br> > **Then** the user should see a list of cities (suggestions) that match what they’ve typed<br>
+  > **Given** the main page is open
+  > **When** user starts typing in the city textbox
+  > **Then** the user should see a list of cities (suggestions) that match what they’ve typed
 
   Scenario 3: User can select a city from the suggested list.
 
-  > **Given** the user was typing “Berlin” in the city textbox and the list of suggested cities is showing<br> > **When** the user selects a city (e.g., “Berlin, Germany”) from the list<br> > **Then** their city should be changed to that city (i.e., “Berlin, Germany”) and the user should receive a list of upcoming events in that city<br>
+  > **Given** the user was typing “Berlin” in the city textbox and the list of suggested cities is showing
+  > **When** the user selects a city (e.g., “Berlin, Germany”) from the list
+  > **Then** their city should be changed to that city (i.e., “Berlin, Germany”) and the user should receive a list of upcoming events in that city
 
 - [ ] USER STORY 2:
       FEATURE 2: SHOW/HIDE AN EVENT’S DETAILS
 
   Scenario 1: An event element is collapsed by default.
 
-  > **Given** user is viewing the event list<br> > **When** the user sees an event<br> > **Then** the event details will be hidden by default<br>
+  > **Given** user is viewing the event list
+  > **When** the user sees an event
+  > **Then** the event details will be hidden by default
 
   Scenario 2: User can expand an event to see its details.
 
-  > **Given** the user finds an event they want to know more about<br> > **When** the user clicks a button<br> > **Then** the event details will be displayed<br>
+  > **Given** the user finds an event they want to know more about
+  > **When** the user clicks a button
+  > **Then** the event details will be displayed
 
   Scenario 3: User can collapse an event to hide its details.
 
-  > **Given** the user no longer wants to see the event details<br> > **When** the user clicks a button<br> > **Then** the event details will be hidden<br>
+  > **Given** the user no longer wants to see the event details
+  > **When** the user clicks a button
+  > **Then** the event details will be hidden
 
 - [ ] USER STORY 3:
       FEATURE 3: SPECIFY NUMBER OF EVENTS
 
   Scenario 1: When user hasn’t specified a number, 32 is the default number.
 
-  > **Given** the user has not made a selection<br> > **When** the user view the event list<br> > **Then** the event list will be 32 entires in length by default<br>
+  > **Given** the user has not made a selection
+  > **When** the user view the event list
+  > **Then** the event list will be 32 entires in length by default
 
   Scenario 2: User can change the number of events they want to see.
 
-  > **Given** the user wants to change the number of events in the list<br> > **When** the user selects a number in the "number of events" field<br> > **Then** the number of events displayed in the list will match that number<br>
+  > **Given** the user wants to change the number of events in the list
+  > **When** the user selects a number in the "number of events" field
+  > **Then** the number of events displayed in the list will match that number
 
 - [ ] USER STORY 4:
       FEATURE 4: USE THE APP WHEN OFFLINE
 
   Scenario 1: Show cached data when there’s no internet connection.
 
-  > **Given** the user is offline<br> > **When** the user access' the app<br> > **Then** the user will see cached information from their most recent search<br>
+  > **Given** the user is offline
+  > **When** the user access' the app
+  > **Then** the user will see cached information from their most recent search
 
   Scenario 2: Show error when user changes the settings (city, time range).
 
-  > **Given** the user is offline<br> > **When** the user changes the setting for the selected city or time range<br> > **Then** an error will be displayed indicating they must connect to a network to complete their search<br>
+  > **Given** the user is offline
+  > **When** the user changes the setting for the selected city or time range
+  > **Then** an error will be displayed indicating they must connect to a network to complete their search
 
 - [ ] USER STORY 5:
       FEATURE 5: DATA VISUALIZATION
 
   Scenario 1: Show a chart with the number of upcoming events in each city.
 
-  > **Given** the user wants to compare the number of events in each city<br> > **When** the user navigates to the bottom of the page or clicks a button<br> > **Then** the user will see a chart comparing the number of events in all cities<br>
+  > **Given** the user wants to compare the number of events in each city
+  > **When** the user navigates to the bottom of the page or clicks a button
+  > **Then** the user will see a chart comparing the number of events in all cities
 
 See the [open issues](https://github.com/Carbon-42/time-place/issues) for a full list of proposed features (and known issues).
 
