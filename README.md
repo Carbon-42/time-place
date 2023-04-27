@@ -143,20 +143,23 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ## User Stories -->
 
-## USER STORIES
-
----
+## User Stories
 
 1. As a user, I would like to be able to filter events by city so that I can see the list of events that
    take place in that city.
+   <br>
 2. As a user, I would like to be able to show/hide event details so that I can see more/less
    information about an event.
+   <br>
 3. As a user, I would like to be able to specify the number of events I want to view in the app so
    that I can see more or fewer events in the events list at once.
+   <br>
 4. As a user, I would like to be able to use the app when offline so that I can see the events I
    viewed the last time I was online.
+   <br>
 5. As a user, I would like to be able to add the app shortcut to my home screen so that I can
    open the app faster.
+   <br>
 6. As a user, I would like to be able to see a chart showing the upcoming events in each city so
    that I know what events are organized in which city.
 
@@ -164,7 +167,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Features
 
----
+   <br>
 
 #### FEATURE 1: FILTER EVENTS BY CITY
 
@@ -186,6 +189,8 @@ Scenario 3: User can select a city from the suggested list.
 > **When** the user selects a city (e.g., “Berlin, Germany”) from the list  
 > **Then** their city should be changed to that city (i.e., “Berlin, Germany”) and the user should receive a list of upcoming events in that city
 
+<br>
+
 #### FEATURE 2: SHOW/HIDE AN EVENT’S DETAILS
 
 Scenario 1: An event element is collapsed by default.
@@ -206,6 +211,8 @@ Scenario 3: User can collapse an event to hide its details.
 > **When** the user clicks a button  
 > **Then** the event details will be hidden
 
+<br>
+
 #### FEATURE 3: SPECIFY NUMBER OF EVENTS
 
 Scenario 1: When user hasn’t specified a number, 32 is the default number.
@@ -220,6 +227,8 @@ Scenario 2: User can change the number of events they want to see.
 > **When** the user selects a number in the "number of events" field  
 > **Then** the number of events displayed in the list will match that number
 
+<br>
+
 #### FEATURE 4: USE THE APP WHEN OFFLINE
 
 Scenario 1: Show cached data when there’s no internet connection.
@@ -233,6 +242,8 @@ Scenario 2: Show error when user changes the settings (city, time range).
 > **Given** the user is offline  
 > **When** the user changes the setting for the selected city or time range  
 > **Then** an error will be displayed indicating they must connect to a network to complete their search
+
+<br>
 
 #### FEATURE 5: DATA VISUALIZATION
 
