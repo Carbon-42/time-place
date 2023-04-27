@@ -57,7 +57,8 @@
     <li>
       <a href="#about-the-project">About The Project</a>
     </li>
-        <li><a href="#built-with">Built With</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#user-stories">User Stories</a></li>
     <li><a href="#features">Features</a></li>
     <!-- <li> -->
       <!-- <a href="#getting-started">Getting Started</a> -->
@@ -140,11 +141,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-<!-- ## Features -->
+<!-- ## User Stories -->
 
-## Features
+## USER STORIES
 
-### USER STORIES:
+---
 
 1. As a user, I would like to be able to filter events by city so that I can see the list of events that
    take place in that city.
@@ -159,9 +160,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 6. As a user, I would like to be able to see a chart showing the upcoming events in each city so
    that I know what events are organized in which city.
 
----
+<!-- ## Features -->
 
-### USER STORY 1:
+## Features
+
+---
 
 #### FEATURE 1: FILTER EVENTS BY CITY
 
@@ -183,8 +186,6 @@ Scenario 3: User can select a city from the suggested list.
 > **When** the user selects a city (e.g., “Berlin, Germany”) from the list  
 > **Then** their city should be changed to that city (i.e., “Berlin, Germany”) and the user should receive a list of upcoming events in that city
 
-### USER STORY 2:
-
 #### FEATURE 2: SHOW/HIDE AN EVENT’S DETAILS
 
 Scenario 1: An event element is collapsed by default.
@@ -205,8 +206,6 @@ Scenario 3: User can collapse an event to hide its details.
 > **When** the user clicks a button  
 > **Then** the event details will be hidden
 
-### USER STORY 3:
-
 #### FEATURE 3: SPECIFY NUMBER OF EVENTS
 
 Scenario 1: When user hasn’t specified a number, 32 is the default number.
@@ -220,8 +219,6 @@ Scenario 2: User can change the number of events they want to see.
 > **Given** the user wants to change the number of events in the list  
 > **When** the user selects a number in the "number of events" field  
 > **Then** the number of events displayed in the list will match that number
-
-### USER STORY 4:
 
 #### FEATURE 4: USE THE APP WHEN OFFLINE
 
@@ -237,8 +234,6 @@ Scenario 2: Show error when user changes the settings (city, time range).
 > **When** the user changes the setting for the selected city or time range  
 > **Then** an error will be displayed indicating they must connect to a network to complete their search
 
-### USER STORY 5:
-
 #### FEATURE 5: DATA VISUALIZATION
 
 Scenario 1: Show a chart with the number of upcoming events in each city.
@@ -246,6 +241,8 @@ Scenario 1: Show a chart with the number of upcoming events in each city.
 > **Given** the user wants to compare the number of events in each city  
 > **When** the user navigates to the bottom of the page or clicks a button  
 > **Then** the user will see a chart comparing the number of events in all cities
+
+---
 
 See the [open issues](https://github.com/Carbon-42/time-place/issues) for a full list of proposed features (and known issues).
 
