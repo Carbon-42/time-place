@@ -34,7 +34,7 @@
   </a>
 
 <h3 align="center">A Time & Place</h3>
-<a href="https://carbon-42.github.io/time-place">Live URL</a>
+<a href="https://carbon-42.github.io/time-place" target="_blank">Live URL</a>
 
   <p align="center">
     <!-- project_description -->
