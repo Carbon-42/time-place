@@ -213,23 +213,23 @@ USER STORIES:
 - [ ] USER STORY 4:
       FEATURE 4: USE THE APP WHEN OFFLINE
 
-Scenario 1: Show cached data when there’s no internet connection.
-Given the user is offline
-When the user access' the app
-Then the user will see cached information from their most recent search
+  Scenario 1: Show cached data when there’s no internet connection.
+  Given the user is offline
+  When the user access' the app
+  Then the user will see cached information from their most recent search
 
-Scenario 2: Show error when user changes the settings (city, time range).
-Given the user is offline
-When the user changes the setting for the selected city or time range
-Then an error will be displayed indicating they must connect to a network to complete their search
+  Scenario 2: Show error when user changes the settings (city, time range).
+  Given the user is offline
+  When the user changes the setting for the selected city or time range
+  Then an error will be displayed indicating they must connect to a network to complete their search
 
 - [ ] USER STORY 5:
       FEATURE 5: DATA VISUALIZATION
 
-Scenario 1: Show a chart with the number of upcoming events in each city.
-Given the user wants to compare the number of events in each city
-When the user navigates to the bottom of the page or clicks a button
-Then the user will see a chart comparing the number of events in all cities
+  Scenario 1: Show a chart with the number of upcoming events in each city.
+  Given the user wants to compare the number of events in each city
+  When the user navigates to the bottom of the page or clicks a button
+  Then the user will see a chart comparing the number of events in all cities
 
 See the [open issues](https://github.com/Carbon-42/time-place/issues) for a full list of proposed features (and known issues).
 
