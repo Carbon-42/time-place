@@ -34,7 +34,7 @@
   </a>
 
 <h3 align="center">A Time & Place</h3>
-<a href="https://carbon-42.github.io/time-place">Live</a>
+<a href="https://carbon-42.github.io/time-place">Live URL</a>
 
   <p align="center">
     <!-- project_description -->
@@ -250,7 +250,7 @@ Don't forget to give the project a star! Thanks again!
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- LICENSE -->
 
@@ -262,7 +262,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 
-## Contact
+<!-- ## Contact -->
 
 <!-- Your Name - [@](https://twitter.com/) - email@email_client.com
 
@@ -278,7 +278,7 @@ Project Link: [https://github.com/Carbon-42/time-place](https://github.com/Carbo
 - []()
 - []() -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
