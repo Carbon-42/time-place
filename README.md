@@ -144,7 +144,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Features
 
-USER STORIES:
+### USER STORIES:
 
 1. As a user, I would like to be able to filter events by city so that I can see the list of events that
    take place in that city.
@@ -158,6 +158,8 @@ USER STORIES:
    open the app faster.
 6. As a user, I would like to be able to see a chart showing the upcoming events in each city so
    that I know what events are organized in which city.
+
+---
 
 ### USER STORY 1:
 
