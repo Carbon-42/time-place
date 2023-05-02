@@ -83,7 +83,7 @@
 
 A Time & Place is a serverless, progressive web application (PWA) with React using a
 test-driven development (TDD) technique. The application uses the Google
-Calendar API to fetch upcoming events.
+Calendar API to fetch upcoming events. The app will use serverless functions to server authorization tokens to handle app security.
 
 <!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `Carbon-42`, `time-place`, ``, `brad-richardson-6`, `email_client`, `email`, `A Time & Place`, `project_description` -->
 
