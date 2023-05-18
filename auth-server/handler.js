@@ -172,6 +172,7 @@ module.exports.getCalendarEvents = async (event) => {
 // endpoints:
 //   GET - https://ibgc7xyaz7.execute-api.us-west-2.amazonaws.com/dev/api/get-auth-url
 //   GET - https://ibgc7xyaz7.execute-api.us-west-2.amazonaws.com/dev/api/token/{code}
+//   GET - https://8cwwv3tyi1.execute-api.us-west-2.amazonaws.com/dev/api/get-events/{access_token}
 // functions:
 //   getAuthURL: auth-server-dev-getAuthURL (11 MB)
 //   getAccessToken: auth-server-dev-getAccessToken (11 MB)
