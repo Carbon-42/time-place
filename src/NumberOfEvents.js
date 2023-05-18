@@ -17,7 +17,7 @@ class NumberOfEvents extends Component {
   render() {
     return (
       <div className="selector">
-        <label for="number">Number of Events:</label>
+        <label for="number">Number of Events: </label>
         <select 
           id="number"
           type="number"
