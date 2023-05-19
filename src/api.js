@@ -76,7 +76,7 @@ export const getAccessToken = async () => {
     const code = await searchParams.get("code");
     if (!code) {
       const results = await axios.get(
-        'https://ibgc7xyaz7.execute-api.us-west-2.amazonaws.com/dev/api/get-auth-url'
+        'https://8cwwv3tyi1.execute-api.us-west-2.amazonaws.com/dev/api/get-auth-url'
       );
       const { authUrl } = results.data;
       return (window.location.href = authUrl);
@@ -89,7 +89,7 @@ export const getAccessToken = async () => {
 const getToken = async (code) => {
   const encodeCode = encodeURIComponent(code);
   const { access_token } = await fetch(
-    'https://ibgc7xyaz7.execute-api.us-west-2.amazonaws.com/dev/api/token/' + encodeCode
+    'https://8cwwv3tyi1.execute-api.us-west-2.amazonaws.com/dev/api/token/' + encodeCode
   )
     .then((res) => {
       return res.json();
