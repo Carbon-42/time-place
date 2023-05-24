@@ -9,16 +9,16 @@ describe('<NumberOfEvents /> component', () => {
     expect(NumberOfEventsWrapper.find('select')).toHaveLength(1);
   })
 
-  test('rendered number of events is 32 by default', () => {
+  test('rendered number of events is 36 by default', () => {
     const NumberOfEventsWrapper = shallow(<NumberOfEvents />);
-    expect(NumberOfEventsWrapper.find('select').prop('value')).toBe(32);
+    expect(NumberOfEventsWrapper.state('value')).toBe(36);
   })
   
   test('change number of events when value is entered', () => {
-    const NumberOfEventsWrapper = shallow(<NumberOfEvents />);
-    const value = { target: { value: 24 }};
-    NumberOfEventsWrapper.find('select').simulate('change', value);
-    expect(NumberOfEventsWrapper.find('select').prop('value')).toBe(24);
+    const NumberOfEventsWrapper = shallow(<NumberOfEvents updateEvents={() => {}}/>);
+    expect(NumberOfEventsWrapper.state('value')).toBe(36);
+    NumberOfEventsWrapper.find('#option2').simulate('click');
+    expect(NumberOfEventsWrapper.state('value')).toBe(24);
   })
 
 })
