@@ -1,34 +1,30 @@
 import React, { Component } from "react";
 
 class NumberOfEvents extends Component {
-  state = {
-    value: 32
+  state={
+    value: 36
   }
-
-  handleSelect = (event) => {
-    const inputValue = event.target.value;
+  
+  handleClick = (event)=> {
     this.setState({
-      value: inputValue,
+      value: event
     });
-    
+    this.props.updateEvents(this.props.selectedCity, event);
   };
 
-  
   render() {
     return (
       <div className="selector">
-        <label for="number">Number of Events: </label>
+        <label className="number">Number of Events: </label>
         <select 
           id="number"
           type="number"
           className="selector"
-          value={this.state.value}
-          onChange={this.handleSelect}
           >{this.state.value}
-          <option id="option1">32</option>
-          <option id="option2">24</option>
-          <option id="option3">12</option>
-          <option id="option4">6</option>
+          <option id="option1" onClick={() => this.handleClick(36)}>36</option>
+          <option id="option2" onClick={() => this.handleClick(24)}>24</option>
+          <option id="option3" onClick={() => this.handleClick(12)}>12</option>
+          <option id="option4" onClick={() => this.handleClick(6)}>6</option>
         </select>
       </div>
 
