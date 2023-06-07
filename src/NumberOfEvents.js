@@ -5,11 +5,11 @@ class NumberOfEvents extends Component {
     value: 36
   }
   
-  handleClick = (event)=> {
-    this.setState({
-      value: event
-    });
-    this.props.updateEvents(this.props.selectedCity, event);
+
+  handleClick = event => {
+    const value = event.target.value;
+    this.setState({value});
+    this.props.updateEvents(this.props.selectedCity, value);
   };
 
   render() {
@@ -18,13 +18,14 @@ class NumberOfEvents extends Component {
         <label className="number">Number of Events: </label>
         <select 
           id="number"
-          type="number"
-          className="selector"
+          className="select"
+          value={this.state.value}
+          onChange={this.handleClick}
           >{this.state.value}
-          <option id="option1" onClick={() => this.handleClick(36)}>36</option>
-          <option id="option2" onClick={() => this.handleClick(24)}>24</option>
-          <option id="option3" onClick={() => this.handleClick(12)}>12</option>
-          <option id="option4" onClick={() => this.handleClick(6)}>6</option>
+          <option id="option1" value="36">36</option>
+          <option id="option2" value="24">24</option>
+          <option id="option3" value="12">12</option>
+          <option id="option4" value="6">6</option>
         </select>
       </div>
 
