@@ -24,7 +24,6 @@ describe('<App /> component', () => {
 });
 
 describe('<App /> integration', () => {
-    
     test('App passes "events" state as a prop to EventList', () => {
         const AppWrapper = mount(<App />);
         const AppEventsState = AppWrapper.state('events');
@@ -68,7 +67,7 @@ describe('<App /> integration', () => {
       test('NumberOfEvents value prop passes to App state', async () => {
         const AppWrapper = mount(<App />);
         const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
-        await NumberOfEventsWrapper.find('#option4').simulate('click');
+        await NumberOfEventsWrapper.find('select').simulate('change', { target: { value: 6 } });
         expect(AppWrapper.state('eventCount')).toBe(6);
         AppWrapper.unmount();
       })
@@ -76,7 +75,7 @@ describe('<App /> integration', () => {
       test('NumberOfEvents value state change is passed to EventList', async () => {
         const AppWrapper = mount(<App />);
         const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
-        await NumberOfEventsWrapper.find('#option4').simulate('click');
+        await NumberOfEventsWrapper.find('select').simulate('change', { target: { value: 6 } });
         expect(AppWrapper.state('eventCount')).toBe(6);
         expect(AppWrapper.state('events').length).toBe(6);
         AppWrapper.unmount();
