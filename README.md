@@ -215,11 +215,11 @@ Scenario 3: User can collapse an event to hide its details.
 
 #### FEATURE 3: SPECIFY NUMBER OF EVENTS
 
-Scenario 1: When user hasn’t specified a number, 32 is the default number.
+Scenario 1: When user hasn’t specified a number, 36 is the default number.
 
 > **Given** the user has not made a selection  
 > **When** the user view the event list  
-> **Then** the event list will be 32 entires in length by default
+> **Then** the event list will be 36 entires in length by default
 
 Scenario 2: User can change the number of events they want to see.
 
