@@ -34,6 +34,7 @@ class App extends Component {
     const searchParams = new URLSearchParams(window.location.search);
     const code = searchParams.get("code");
     this.setState({ showWelcomeScreen: !(code || isTokenValid) });
+    // console.log('code', code, 'istokenvalid', isTokenValid)
     if ((code || isTokenValid) && this.mounted) {
       getEvents().then((events) => {
         if (this.mounted) {
@@ -83,9 +84,9 @@ class App extends Component {
     }
 
   render() {
+    // console.log('welcomescreen', this.state.showWelcomeScreen)
     if (this.state.showWelcomeScreen === undefined) 
-    return 
-    <div className="App" />
+    return <div className="App" />
     return (
       <div className="App">
       <h1>A TIME & PLACE APP</h1>
