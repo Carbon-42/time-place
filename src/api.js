@@ -74,20 +74,24 @@ export const getEvents = async () => {
 export const getAccessToken = async () => {
   const accessToken = localStorage.getItem('access_token');
   const tokenCheck = accessToken && (await checkToken(accessToken));
-
+  console.log('accessToken', accessToken)
+  console.log('tokenCheck', tokenCheck)
   if (!accessToken || tokenCheck.error) {
     await localStorage.removeItem("access_token");
     const searchParams = new URLSearchParams(window.location.search);
     const code = await searchParams.get("code");
+    console.log('code', code)
     if (!code) {
       const results = await axios.get(
         'https://8cwwv3tyi1.execute-api.us-west-2.amazonaws.com/dev/api/get-auth-url'
       );
       const { authUrl } = results.data;
+      console.log('authUrl', authUrl)
       return (window.location.href = authUrl);
     }
     return code && getToken(code);
   }
+  console.log('accessToken', accessToken)
   return accessToken;
 }
 
