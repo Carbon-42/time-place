@@ -19,8 +19,8 @@ const EventGenre = ({ events }) => {
   }
   
 return (
-  <ResponsiveContainer height={400}>
-    <PieChart width={400} height={400}>
+  <ResponsiveContainer height={400} className='event-genre' >
+    <PieChart className='event-genre' width={400} height={400}>
       <Pie
         data={data}
         cx={200}
