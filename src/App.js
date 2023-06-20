@@ -7,6 +7,8 @@ import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
 import NumberOfEvents from './NumberOfEvents';
 import { OfflineAlert } from './Alert';
 import WelcomeScreen from './WelcomeScreen';
+import EventGenre from './EventGenre';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 
 class App extends Component {
@@ -82,6 +84,19 @@ class App extends Component {
     });
     }
 
+    getData = () => {
+      const {locations, events} = this.state;
+      const data = locations.map((location)=>{
+        const number = events.filter((event) => event.location === location).length
+        const city = location.split(', ').shift()
+        return {city, number};
+      })
+      console.log(data)
+
+      return data;
+    };
+
+    
   render() {
     if (this.state.showWelcomeScreen === undefined) 
       return <div className="App" />;
@@ -91,6 +106,22 @@ class App extends Component {
         <OfflineAlert text={this.state.offlineAlert} />
         <CitySearch locations={this.state.locations} eventCount={this.state.eventCount} updateEvents={this.updateEvents} />
         <NumberOfEvents  eventCount={this.state.eventCount} selectedCity={this.state.selectedCity} updateEvents={this.updateEvents} />
+        <div className='data-vis-wrapper'>
+          <EventGenre events={this.state.events} height={400} />
+          <ResponsiveContainer height={400} >
+            <ScatterChart
+            margin={{
+              top: 20, right: 20, bottom: 20, left: 20,
+            }}
+            >
+              <CartesianGrid />
+              <XAxis type="category" dataKey="city" name="city" />
+              <YAxis type="number" dataKey="number" name="number of events" allowDecimals={false} />
+              <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+              <Scatter data={this.getData()} fill="#8884d8" />
+            </ScatterChart>
+          </ResponsiveContainer>
+        </div>
         <EventList events={this.state.events}/>
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen} getAccessToken={() => { getAccessToken() }} />
       </div>
