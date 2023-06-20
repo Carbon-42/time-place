@@ -6,7 +6,7 @@ const EventGenre = ({ events }) => {
 
   const [data, setData] = useState([]);
   const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884d8'];
-
+  // eslint-disable-next-line
   useEffect(() => { setData(() => getData()); }, [events]);
 
   function getData() {
