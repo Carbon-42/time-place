@@ -57,43 +57,54 @@ class App extends Component {
       // console.log(location, eventCount)
       getEvents().then((events) => {
         if (!location || location === 'all') {
-          // const locationEvents = 
-          // events.filter((event) => event.location === location);
           const shownEvents = events.slice(0, eventCount);
           this.setState({
             events: shownEvents,
-            eventCount: eventCount
+            eventCount: eventCount, 
+            selectedCity: null
           });
-          // console.log('location', location)
-          // console.log('locationEvents', locationEvents.length)
-          // console.log('UE events', events.length)
-          // console.log('UE eventcount', eventCount)
         } else {
         const locationEvents = events.filter((event) => event.location === location);
         const shownEvents = locationEvents.slice(0, eventCount);
         this.setState({
           events: shownEvents,
           selectedCity: location,
-          eventCount: eventCount
+          eventCount: eventCount,
         })
-        // console.log('location', location)
-        // console.log('locationEvents', locationEvents.length)
-        // console.log('UE events', shownEvents.length)
-        // console.log('UE eventcount', eventCount)
       }
     });
     }
 
     getData = () => {
-      const {locations, events} = this.state;
-      const data = locations.map((location)=>{
-        const number = events.filter((event) => event.location === location).length
-        const city = location.split(', ').shift()
-        return {city, number};
-      })
-      console.log(data)
-
-      return data;
+      // console.log('selectedCity', this.state.selectedCity)        
+      const {locations, events, selectedCity} = this.state;
+      // console.log('locations', locations)
+      const locationEvents = (events)
+      const shownEvents = locationEvents.slice(0, this.state.eventCount)
+      const locationCount = extractLocations(shownEvents).length
+      // console.log('scatterEvents', scatterEvents)
+      if (!selectedCity) {
+        const scatterEvents = locations.slice(0, locationCount)
+        const data = scatterEvents.map((location)=>{
+          const number = events.filter((event) => event.location === location).length
+          const city = location.split(', ').shift()
+          // console.log('Dlocation', location)
+          return { city, number };
+        })
+        // console.log('data', data)
+        return data;
+      } else {
+        const scatterEvents = locations.filter((location) => location === selectedCity)//.slice(0, locationCount)
+        // const scatterCity = locations.filter((location) => location === selectedCity)
+        // console.log('scatterCity', scatterCity)
+        const data = scatterEvents.map((location)=>{
+          // console.log('events', events, 'location', location)
+          const number = events.filter((event) => event.location === location).length
+          const city = location.split(', ').shift()
+          return {  city, number };        
+        })
+        return data
+      }
     };
 
     
