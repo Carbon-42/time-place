@@ -10,21 +10,22 @@ const EventGenre = ({ events }) => {
   useEffect(() => { setData(() => getData()); }, [events]);
 
   function getData() {
-    const genres = ['React', 'JavaScript', 'Node', 'jQuery', 'AngularJS'];
+    const genres = ['React', 'JavaScript', 'Node', 'jQuery', 'Angular'];
     const data = genres.map((genre) => {
       const value = events.filter(({ summary }) => summary.split(' ').includes(genre)).length
+      // console.log('value', value)
         return { name: genre, value}
       });
     return data;
   }
   
 return (
-  <ResponsiveContainer height={400} className='event-genre' >
-    <PieChart className='event-genre' width={400} height={400}>
+  <ResponsiveContainer height={400} >
+    <PieChart height={400}>
       <Pie
         data={data}
-        cx={200}
-        cy={200}
+        cx={'50%'}
+        cy={'50%'}
         labelLine={false}
         outerRadius={80}
         fill="#8884d8"
