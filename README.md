@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Carbon-42/time-place">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./public/meet-app-192.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">A Time & Place</h3>
@@ -79,7 +79,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="./public/Screenshot.png">
 
 A Time & Place is a serverless, progressive web application (PWA) with React using a
 test-driven development (TDD) technique. The application uses the Google
