@@ -9,6 +9,11 @@
 }
 
 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.EventList {
   display: grid;
   padding: 10px;
   list-style: none;
@@ -18,7 +23,7 @@ ul {
 }
 
 @media screen and (max-width: 576px) {
-  ul {
+  .EventList {
     grid-template-columns: 1fr;
   }
 }
